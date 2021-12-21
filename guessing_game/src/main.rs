@@ -1,3 +1,4 @@
+// Imports for Random, Compare and In&Out 
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
@@ -22,7 +23,7 @@ fn main() {
         };
         // Output of what you guessed
         println!("You guessed: {}", guess);
-        // checks if the guess matches with the secret number via the cmp function 
+        // checks if the guess matches with the secret number via the cmp function
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),

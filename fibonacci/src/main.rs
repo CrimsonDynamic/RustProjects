@@ -1,6 +1,5 @@
-
 fn main() {
-    println!("{}",fibonnaci_seq(10));
+    println!("{}", fibonnaci_seq(10));
 }
 
 fn fibonnaci_seq(i: i32) -> u64 {
