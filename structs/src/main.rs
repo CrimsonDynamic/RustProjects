@@ -21,6 +21,13 @@ fn main() {
     );
     let user2 = User {
         email: String::from("hallo@mail.com"),
-        ..user1
+        username: String::from("warrior01"),
+        ..user1 // update syntax normally it would be
+        /*
+        active: user1.active,
+        username: user1.username,
+        email: String::from("hallo@mail.com"),
+        sign_in_count: user.sign_in_count,
+        */
     };
 }
