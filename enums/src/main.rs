@@ -5,7 +5,7 @@ enum IpAddrKind {
 
 enum Message {
     Quit,
-    Move { x: i32, y: i32},
+    Move { x: i32, y: i32 },
     Write(String),
     ChangeColor(i32, i32, i32),
 }
@@ -46,7 +46,7 @@ fn main() {
     let none = plus_one(None);
 
     let config_max = Some(3u8);
-    if let Some(max) = config_max  {
+    if let Some(max) = config_max {
         println!("The Maximum is configured to be: {}", max);
     }
 
@@ -57,7 +57,6 @@ fn main() {
         _ => reroll(),
         // other => move_player(other),
     }
-
 }
 #[derive(Debug)]
 enum UsState {
@@ -75,15 +74,15 @@ enum Coin {
 fn value_in_cents(coin: Coin) -> u8 {
     match coin {
         Coin::Penny => {
-            println!("Lucky Penny!");    
+            println!("Lucky Penny!");
             1
-        },
+        }
         Coin::Nickel => 5,
         Coin::Dime => 10,
-        Coin::Quarter(state) =>{
-            println!("State quarter from {:?}!",state);
+        Coin::Quarter(state) => {
+            println!("State quarter from {:?}!", state);
             25
-        },
+        }
     }
 }
 
@@ -97,4 +96,4 @@ fn plus_one(x: Option<i32>) -> Option<i32> {
 fn add_fancy_hat() {}
 fn remove_fancy_hat() {}
 // fn move_player(num_spaces: u8) {}
-fn reroll(){}
+fn reroll() {}
