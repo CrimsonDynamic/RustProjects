@@ -44,4 +44,13 @@ fn main() {
         SpreadsheetCell::Float(10.12),
     ];
 
+    let mut s = String::new();
+    let data = "initial contents";
+    let s = data.to_string();
+    let s = String::from("initial contents");
+
+    let mut s2 = String::from("foo");
+    let s3 = "bar";
+    s2.push_str(s3);
+    println!("s2 is {}", s2);
 }
